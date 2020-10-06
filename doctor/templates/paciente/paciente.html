@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+
+{% block main %}
+{% load static %}
+
+
+<div class="container-fluid" id="inicio">
+    <div class="row">
+      
+        <div class="col-s12 col-md-12">
+            <div class="card-header bg-light text-dark ">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 id="titulo" class="font-weight-bold" >CONSULTAS <span class="material-icons">
+                        </span></h3>
+                    </div>
+                    <div class="col-md-4 ">
+                        <a href="{% url 'appatencion:pac_r' %}" class="btn btn-warning float-right">REGISTRO NUEVO</a>
+                    </div>
+    
+                </div>
+            </div>
+            <tr>
+                <th colspan="6">
+                    <input type="text" class="form-control" placeholder="buscar">
+                </th>
+
+            </tr>
+            <table class="table table-hover table-striped mt-3">
+
+                <thead class="bg-success text-dark">
+
+                    <tr>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Estado Civil</th>
+                        <th scope="col">Historia Clínica</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                         <td><img src="{% static 'imagenes/user.jpg' %}"
+                                        class="img-thumbnail rounded-circle" width="40px">
+                                </td>
+                        <td>Daniel Francisco Gimenez Lopez</td>
+                        <td>Masculino</td>
+                        <td>38</td>
+                        <td>Guayaquil</td>
+                        <td>danigimenez5@gmail.com</td>
+                        <td>Soltero</td>
+                        <td><a href="#" class="badge badge-pill badge-warning">ver historia</a></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accion</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Editar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{% static 'imagenes/user3.jpg' %}"
+                            class="img-thumbnail rounded-circle" width="40px">
+                    </td>
+                        <td>Ana Ruperta Rendon Gonzales</td>
+                        <td>Femenino</td>
+                        <td>24</td>
+                        <td>Babahoyo</td>
+                        <td>anarendon87@outlook.com</td>
+                        <td>Viuda</td>
+                        <td><a href="#" class="badge badge-pill badge-dark">sin historia</a></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accion</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Editar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

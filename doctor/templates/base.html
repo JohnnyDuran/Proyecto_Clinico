@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Medical</title>
+    {% load static%}
+    <!-- datepicker-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    {% block headcss %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+    <header>
+        {% block header %}
+
+        {% endblock %}
+    </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+       
+    </main>
+    <footer class="bg-dark">
+        <div class="container text-center text-md-left">
+            <div class="row">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Contactanos</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Dirección: Av del Bombero y Otto Arosemena.</a>
+                  </li>
+                  <li>
+                    <a href="#!">Telefono: 2963589 </a>
+                  </li>
+                  <li>
+                    <a href="#!">Correo: vitalpass@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Mapa G-Map</h5>  
+                <ul class="list-unstyled">
+                  <li>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8407567231066!2d-79.93252458600189!3d-2.2136991983864625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d71c44ca735d3%3A0x3c18effbb3d3cf2f!2sJ!5e0!3m2!1ses!2sec!4v1601936672526!5m2!1ses!2sec" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </li>
+                
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Designer</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#">Johnny Leonardo Duran Castillo</a>
+                    <a href="#!">jduranc@unemi.edu.ec</a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/johnny-duran-castillo-4a201b1a6/">Linkedin</a>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright text-center py-3"><strong>© VitalPass con todititos los derechos reservados eh.</strong>
+          </div>
+    </footer>
+
+    {% block frmodal %}
+
+    {% endblock %}
+
+
+
+    <!-- En el orden jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+
+
+    {% block js %}
+
+    {% endblock %}
+
+    {% block jscript %}
+
+    {% endblock %}
+</body>
+
+</html>

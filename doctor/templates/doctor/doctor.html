@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+
+{% block main %}
+{% load static %}
+
+
+<div class="container-fluid" id="inicio">
+    <div class="row">
+        <div class="card col-s12 col-md-6">
+            <form class=" form-group">
+                <fieldset>
+
+                    <legend>   Registro de Doctores</legend>
+                        <div class="card-body">
+                            <input type="file" class="btn btn-warning btn-sm">
+                        </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>Nombre:</label>
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="col form-group">
+                            <label>Cédula:</label>
+                            <input type="text" class="form-control" placeholder="Cedula">
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>Especialidad:</label>
+                            <input type="text" class="form-control" placeholder="Especialidad">
+                        </div>
+                        <div class="col form-group">
+                            <label>Sexo:</label>
+                            <input type="text" class="form-control" placeholder="Sexo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>Fecha Nacimiento:</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col form-group">
+                            <label>Telefono:</label>
+                            <input type="text" class="form-control" placeholder="Telefono">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>Dirección:</label>
+                            <input type="text" class="form-control" placeholder="Direccion">
+                        </div>
+                        <div class="col form-group">
+                            <label>Nacionalidad:</label>
+                            <input type="text" class="form-control" placeholder="Nacionalidad">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label>Tipo de Sangre:</label>
+                            <input type="text" class="form-control" placeholder="Tipo de Sangre">
+                        </div>
+                        <div class="col form-group">
+                            <label>Email:</label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group form-inline">
+                    <label class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-warning btn-sm"> Registrar</button>
+                        <a href="{% url 'inicio' %}" class="btn btn-danger btn-sm">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-s12 col-md-6">
+            <table class="table table-hover table-striped mt-3">
+
+                <thead class="badge-success text-dark">
+
+                    <tr>
+                        <th scope="col">Doctor</th>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Dni</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="6">
+                            <input type="text" class="form-control" placeholder="buscar">
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td>Marco Fernando Moreno Rendon</td>
+                        <td>Medicina General</td>
+                        <td>0962225321</td>
+                        <td>Ventanas</td>
+                        <td><a href="#" class="badge badge-pill badge-success">Activo</a></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accion</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Editar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mariana Macias Pelaes</td>
+                        <td>Obstetriz</td>
+                        <td>3216854623</td>
+                        <td>Samborondon</td>
+                        <td><a href="#" class="badge badge-pill badge-danger">Inactivo</a></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accion</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Editar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Espinal Menendez</td>
+                        <td>Neurologo</td>
+                        <td>2365896325</td>
+                        <td>Cuenca</td>
+                        <td><a href="#" class="badge badge-pill badge-success">Accion</a></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accion</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Editar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
